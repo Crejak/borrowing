@@ -3,45 +3,43 @@
     Bienvenue sur {{ title }}, l'application de solidarité de la Doua&#8239;! Prêter et emprunter du matériel en tout sérénité&#8239;!
   </div>
 </div>
-<div class="row">
-  <div class="col">
-    <span>Mail :</span>
-  </div>
-  <div class="col-7 form-group">
-    <input name="email" class="form-control" type="email">
-    <div class="col form-check">
-      <label class="form-check-label" for="email"></label>
+<form>
+  <div class="row">
+    <div class="col form-group">
+      <label for="email">Mail :</label>
+      <input name="email" class="form-control" type="email">
+      <!--div class="col form-check">
+        <label class="form-check-label" for="email"></label>
+      </div-->
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col">
-    <span>Mot de passe :</span>
-  </div>
-  <div class="col-7 form-group">
-    <input name="password" class="form-control" type="password">
-    <div class="col form-check">
-      <label class="form-check-label" for="password"></label>
+  <div class="row">
+    <div class="col form-group">
+      <label for="password">Mot de passe :</label>
+      <input name="password" class="form-control" type="password">
+      <!--div class="col form-check">
+        <label class="form-check-label" for="password"></label>
+      </div-->
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col text-right">
-    <a href="#">Mot de passe oublié</a>
+  <div class="row">
+    <div class="col form-group">
+      <a routerLink="/forgottenpassword">Mot de passe oublié</a>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col text-center">
-    <button type="submit" class="btn btn-primary">Se connecter</button>
+  <div class="row">
+    <div class="col text-center">
+      <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col text-center">
-    ou
+  <div class="row">
+    <div class="col text-center">
+      ou
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col text-center">
-    <a href="/createaccount" class="btn btn-primary">Créer un compte</a>
+  <div class="row">
+    <div class="col text-center">
+      <a routerLink="/createaccount" class="btn btn-primary btn-block">Créer un compte</a>
+    </div>
   </div>
-</div>
+</form>

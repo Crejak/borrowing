@@ -7,5 +7,5 @@ import { HeaderComponent } from '../app/header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'troc@mpus';
+  
 }

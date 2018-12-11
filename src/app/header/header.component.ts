@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UtilService } from '../util.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() title: string;
+  title: string;
 
-  constructor() { }
+  constructor(private utilService: UtilService) { }
 
   ngOnInit() {
+    this.title = this.utilService.getApplicationName();
   }
 
 }

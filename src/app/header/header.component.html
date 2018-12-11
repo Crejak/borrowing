@@ -1,3 +1,13 @@
-<div class="navbar navbar-dark bg-dark">
-  <span class="navbar-brand display-1 lead">{{ title }}</span>
-</div>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <!--a routerLink="" class="navbar-brand display-1 lead">{{ title }}</a-->
+  <a routerLink="" class="navbar-brand display-1 lead"><img src="assets/logo_black.png" height="30" [alt]="title"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="account"><fa name="user"></fa> Mon compte</a>
+      <a class="nav-item nav-link" routerLink="signout"><fa name="sign-out"></fa> Déconnexion</a>
+    </div>
+  </div>
+</nav>
