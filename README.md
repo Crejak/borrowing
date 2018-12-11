@@ -1,4 +1,12 @@
-# Trocampus
+# Trocampus / BorroWing
+
+## Informations pour le développement
+
+Pour lancer le projet sur vos machines, il faut au préalable installer [NPM](https://www.npmjs.com/get-npm). Après avoir cloné le projet, lancez la commande `npm install` dans le dossier racine. NPM installera alors toutes les dépendances nécessaires au lancement (ça peut prendre un peu de temps). Après quoi, il suffit de lancer l'application avec `ng serve --open`.
+
+### Précision concernant Angular
+
+Il est possible qu'il manque une dépendance concernant AngularCLI. Si vous avez une erreur de ce genre, la commande `npm install -g @angular/cli@latest` devrait résoudre le problème.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
