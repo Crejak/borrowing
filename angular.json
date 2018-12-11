@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Trocampus": {
+    "trocampus": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Trocampus",
+            "outputPath": "dist/trocampus",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,8 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -58,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Trocampus:build"
+            "browserTarget": "trocampus:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Trocampus:build:production"
+              "browserTarget": "trocampus:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Trocampus:build"
+            "browserTarget": "trocampus:build"
           }
         },
         "test": {
@@ -103,7 +102,7 @@
         }
       }
     },
-    "Trocampus-e2e": {
+    "trocampus-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Trocampus:serve"
+            "devServerTarget": "trocampus:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Trocampus:serve:production"
+              "devServerTarget": "trocampus:serve:production"
             }
           }
         },
@@ -132,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "Trocampus"
+  "defaultProject": "trocampus"
 }
