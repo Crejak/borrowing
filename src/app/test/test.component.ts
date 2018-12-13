@@ -14,11 +14,12 @@ export class TestComponent implements OnInit {
   constructor(
     private authenticationService : AuthenticationService,
     private userService : UserService) {
-
   }
 
   getLoggedInUser(): void {
-    this.user = this.authenticationService.getLoggedInUser();
+    this.authenticationService.getLoggedInUser().subscribe(user => {
+      this.user = user;
+    });
   }
 
   ngOnInit() {
@@ -27,11 +28,9 @@ export class TestComponent implements OnInit {
 
   onClick() {
     let authenticated = this.authenticationService.logIn("mazine.assimi@insa-lyon.fr", "Mazine123");
-    this.getLoggedInUser();
   }
 
   onClick2() {
     this.authenticationService.logOut();
-    this.getLoggedInUser();
   }
 }

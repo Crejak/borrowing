@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { UserService, User } from './user.service';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,19 +10,20 @@ export class AuthenticationService {
 
   private accounts: UserAccount[];
   private loggedInAccountId: number;
+  private loggedInUser: Subject<User>;
 
   constructor(private userService: UserService) {
     this.accounts = ACCOUNTS;
     this.loggedInAccountId = null;
+    this.loggedInUser = new Subject<User>();
   }
 
-  getLoggedInUser(): User {
-    if (this.loggedInAccountId !== null && this.loggedInAccountId !== undefined) {
-      let loggedInAccount = this.getUserAccount(this.loggedInAccountId);
-      let loggedInUser = this.userService.getUser(loggedInAccount.userId);
-      return loggedInUser;
-    }
-    return null;
+  getLoggedInUser(): Subject<User> {
+    return this.loggedInUser;
+  }
+
+  isAuthenticated(): boolean {
+    return this.loggedInAccountId !== null && this.loggedInAccountId !== undefined;
   }
 
   logIn(email: string, password: string): boolean {
@@ -33,6 +35,7 @@ export class AuthenticationService {
     let account = this.getUserAccountByUserId(user.id);
     if (account.password === password) {
       this.loggedInAccountId = account.accountId;
+      this.loggedInUser.next(user);
       return true;
     }
     this.loggedInAccountId = null;
@@ -40,6 +43,7 @@ export class AuthenticationService {
   }
 
   logOut() {
+    this.loggedInUser.next(null);
     this.loggedInAccountId = null;
   }
 
