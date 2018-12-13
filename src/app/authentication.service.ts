@@ -24,12 +24,12 @@ export class AuthenticationService {
     return null;
   }
 
-  logIn(mail: string, password: string): boolean {
+  logIn(email: string, password: string): boolean {
     if (this.loggedInAccountId !== null && this.loggedInAccountId !== undefined) {
       return false;
     }
 
-    let user = this.userService.getUserByMail(mail);
+    let user = this.userService.getUserByEmail(email);
     let account = this.getUserAccountByUserId(user.id);
     if (account.password === password) {
       this.loggedInAccountId = account.accountId;
