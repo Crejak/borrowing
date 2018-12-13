@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class UtilService {
 
+  public developperMode: boolean = true;
+
   constructor() { }
 
   getApplicationName(): string {
