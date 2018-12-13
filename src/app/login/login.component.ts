@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    let user = this.authenticationService.getLoggedInUser();
+    if (user !== null && user !== undefined) {
+      this.router.navigate(['/accueil']);
+    }
     this.title = this.utilService.getApplicationName();
   }
 

@@ -1,14 +1,14 @@
 <div class="row">
   <header class = "col blockquote text-center">Création de compte</header>
 </div>
-<form>
+<form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
   <div class="row">
       <img src="assets/addImage.png" class="rounded mx-auto d-block" height="120" alt="addImage">
   </div>
   <div class="row">
       <div class="col form-group">
         <label for="nom">Nom :</label>
-        <input name="nom" class="form-control" type="text">
+        <input name="nom" formControlName="firstName" class="form-control" type="text">
         <!--div class="col form-check">
           <label class="form-check-label" for="email"></label>
         </div-->
@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col form-group">
           <label for="prenom">Prénom :</label>
-          <input name="prenom" class="form-control" type="text">
+          <input name="prenom" formControlName="lastName" class="form-control" type="text">
           <!--div class="col form-check">
             <label class="form-check-label" for="email"></label>
           </div-->
@@ -25,8 +25,8 @@
       </div>
   <div class="row">
     <div class="col form-group">
-      <label for="email">Mail :</label>
-      <input name="email" class="form-control" type="email">
+      <label for="email">Adresse email :</label>
+      <input name="email" formControlName="email" class="form-control" type="email">
       <!--div class="col form-check">
         <label class="form-check-label" for="email"></label>
       </div-->
@@ -35,7 +35,7 @@
   <div class="row">
     <div class="col form-group">
       <label for="password">Mot de passe :</label>
-      <input name="password" class="form-control" type="password">
+      <input name="password" formControlName="password" class="form-control" type="password">
       <!--div class="col form-check">
         <label class="form-check-label" for="password"></label>
       </div-->
@@ -44,7 +44,7 @@
   <div class="row">
     <div class="col form-group">
       <label for="confirmation">Confirmation :</label>
-      <input name="confirmation" class="form-control" type="password">
+      <input name="confirmation" formControlName="confirmPassword" class="form-control" type="password">
       <!--div class="col form-check">
         <label class="form-check-label" for="password"></label>
       </div-->
@@ -52,10 +52,10 @@
   </div>
   <div class="row">
     <div class="col">
-      <button type="/login" class="btn btn-primary btn-block pull-left">Annuler</button>
+      <a routerLink="/login" class="btn btn-primary btn-block pull-left">Annuler</a>
     </div>
     <div class="col">
-      <a routerLink="/notfound" class="btn btn-primary btn-block pull-right">Valider</a>
+      <button type="submit" class="btn btn-primary btn-block pull-right">Valider</button>
     </div>
   </div>
 </form>

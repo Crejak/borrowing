@@ -6,8 +6,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" routerLink="account"><fa name="user"></fa> Mon compte</a>
-      <a class="nav-item nav-link" routerLink="signout"><fa name="sign-out"></fa> Déconnexion</a>
+      <a class="nav-item nav-link" routerLink="account" *ngIf="isAuthenticated"><fa name="user"></fa> Mon compte</a>
+      <span class="nav-item nav-link" (click)="signOut()" *ngIf="isAuthenticated"><fa name="sign-out"></fa> Déconnexion</span>
       <a class="nav-item nav-link" routerLink="test"><fa name="wrench"></fa> (DEVELOPPEURS) Page de test</a>
     </div>
   </div>

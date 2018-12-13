@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { TestComponent } from './test/test.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TestComponent } from './test/test.component';
     LoginComponent,
     NotfoundComponent,
     CreateaccountComponent,
-    TestComponent
+    TestComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,
