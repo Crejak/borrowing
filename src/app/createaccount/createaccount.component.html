@@ -1,3 +1,61 @@
-<p>
-  createaccount works!
-</p>
+<div class="row">
+  <header class = "col blockquote text-center">Création de compte</header>
+</div>
+<form>
+  <div class="row">
+      <img src="assets/addImage.png" class="rounded mx-auto d-block" height="120" alt="addImage">
+  </div>
+  <div class="row">
+      <div class="col form-group">
+        <label for="nom">Nom :</label>
+        <input name="nom" class="form-control" type="text">
+        <!--div class="col form-check">
+          <label class="form-check-label" for="email"></label>
+        </div-->
+      </div>
+    </div>
+    <div class="row">
+        <div class="col form-group">
+          <label for="prenom">Prénom :</label>
+          <input name="prenom" class="form-control" type="text">
+          <!--div class="col form-check">
+            <label class="form-check-label" for="email"></label>
+          </div-->
+        </div>
+      </div>
+  <div class="row">
+    <div class="col form-group">
+      <label for="email">Mail :</label>
+      <input name="email" class="form-control" type="email">
+      <!--div class="col form-check">
+        <label class="form-check-label" for="email"></label>
+      </div-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-group">
+      <label for="password">Mot de passe :</label>
+      <input name="password" class="form-control" type="password">
+      <!--div class="col form-check">
+        <label class="form-check-label" for="password"></label>
+      </div-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-group">
+      <label for="confirmation">Confirmation :</label>
+      <input name="confirmation" class="form-control" type="password">
+      <!--div class="col form-check">
+        <label class="form-check-label" for="password"></label>
+      </div-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="/login" class="btn btn-primary btn-block pull-left">Annuler</button>
+    </div>
+    <div class="col">
+      <a routerLink="/notfound" class="btn btn-primary btn-block pull-right">Valider</a>
+    </div>
+  </div>
+</form>
