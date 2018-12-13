@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   title: string;
   isAuthenticated: boolean;
   user: User;
+  developperMode: boolean
 
   constructor(
     private utilService: UtilService,
@@ -31,6 +32,9 @@ export class HeaderComponent implements OnInit {
         this.isAuthenticated = false;
       }
       this.user = user;
+    });
+    this.utilService.getDevelopperMode().subscribe(devMode => {
+      this.developperMode = devMode;
     });
   }
 

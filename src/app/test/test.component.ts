@@ -9,7 +9,7 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class TestComponent implements OnInit {
 
-  private user: User;
+  user: User;
 
   constructor(
     private authenticationService : AuthenticationService,
