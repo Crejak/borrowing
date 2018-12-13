@@ -32,11 +32,13 @@ export class AuthenticationService {
     }
 
     let user = this.userService.getUserByEmail(email);
-    let account = this.getUserAccountByUserId(user.id);
-    if (account.password === password) {
-      this.loggedInAccountId = account.accountId;
-      this.loggedInUser.next(user);
-      return true;
+    if (user !== null && user !== undefined) {
+      let account = this.getUserAccountByUserId(user.id);
+      if (account.password === password) {
+        this.loggedInAccountId = account.accountId;
+        this.loggedInUser.next(user);
+        return true;
+      }
     }
     this.loggedInAccountId = null;
     return false;

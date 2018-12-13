@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     email: ['', Validators.compose([Validators.required, Validators.email])],
     password: ['', Validators.required]
   });
+  error: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
     if (authenticated) {
       this.router.navigate(['/accueil']);
     } else {
-      console.log("Cet utilisateur n'existe pas");
+      this.error = "Adresse email / mot de passe inconnu(s)"
     }
   }
 
