@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilService } from '../util.service';
 
 @Component({
   selector: 'app-createaccount',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateaccountComponent implements OnInit {
 
-  constructor() { }
+  title : string;
+
+  constructor(private utilService: UtilService) { }
 
   ngOnInit() {
+    this.title = this.utilService.getApplicationName();
   }
 
 }
