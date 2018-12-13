@@ -7,6 +7,9 @@
   <div class="row" *ngIf="error">
     <div class="col">
       <div class="alert alert-danger">
+        <button type="button" class="close" aria-label="Close" (click)="error=null">
+          <span>&times;</span>
+        </button>
         <fa name="exclamation-triangle" style="margin-right: 10px;"></fa> {{ error }}
       </div>
     </div>
