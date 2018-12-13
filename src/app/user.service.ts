@@ -55,8 +55,8 @@ const USERS: User[] = [
   {
     id: 2,
     firstName: "Sophie",
-    lastName: "Marceaux",
-    email: "sophie.marceaux@yahoo.fr",
+    lastName: "Marceau",
+    email: "sophie.marceau@yahoo.fr",
     stars: 2.0
   },
   {
