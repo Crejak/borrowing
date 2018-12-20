@@ -1,4 +1,22 @@
 <app-loginguard></app-loginguard>
-<p>
-  accueil works!
-</p>
+<button type = "button" style="width : 100%" class="btn btn-primary boutonAnnonce"> Déposer une annonce </button>
+<select class= "form-control selectCategories">
+  <option *ngFor="let categorie of categories" value="{{categorie.id}}"> {{categorie.value}} </option>
+</select>
+<div class="searchDiv marginTop">  
+  <fa class ="searchIcon" name="search"></fa>
+  <input type="search" placeholder="Rechercher une annonce" name="searchProduct" class="marginTop form-control searchInput"/> 
+</div>
+<div class="marginTopCustom text-center border rounded" name="featuredAnnonce">
+  <h3> Les annonces du moment </h3>
+  <app-annonce-vue-synthetique *ngFor="let annonce of annonces" 
+                                id="{{annonce.id}}"
+                                titre="{{annonce.titre}}"
+                                idCat="{{annonce.idCat}}"
+                                caution="{{annonce.caution}}"
+                                duree="{{annonce.duree}}"
+                                description="{{annonce.description}}"
+                                photo="{{annonce.photo}}"
+  > 
+  </app-annonce-vue-synthetique>
+</div>

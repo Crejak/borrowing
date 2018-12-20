@@ -13,6 +13,11 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { TestComponent } from './test/test.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { LoginguardComponent } from './loginguard/loginguard.component';
+import { AnnonceComponent } from './annonce/annonce.component';
+import { MyaccountComponent } from './myaccount/myaccount.component';
+import { CssattrPipe } from './cssattr.pipe';
+import { AnnonceVueSynthetiqueComponent } from './annonce-vue-synthetique/annonce-vue-synthetique.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,12 @@ import { LoginguardComponent } from './loginguard/loginguard.component';
     CreateaccountComponent,
     TestComponent,
     AccueilComponent,
-    LoginguardComponent
+    LoginguardComponent,
+    AnnonceComponent,
+    MyaccountComponent,
+    CssattrPipe,
+    AnnonceVueSynthetiqueComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

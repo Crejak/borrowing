@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col text-center">
+    Nouvelle annonce
+  </div>
+</div>
+
+<form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <!-- div for the product's picture -->
+    <div class="col">
+      <br/>
+      <img src="assets/addImage.png" class="rounded mx-auto d-block" height="120" alt="addImage">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="titre">Titre :</label>
+      <input formControlName="titre" class="form-control" type="text">
+      <label for="categorie">Catégorie :</label>
+      <input formControlName="categorie" class="form-control" type="text">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="caution">Caution :</label>
+      <input formControlName="caution" class="form-control" type="text" placeholder="€">
+      <label for="maxDuration">Durée max :</label>
+      <input formControlName="maxDuration" class="form-control" type="number" placeholder="jours">
+      <label for="description">Description :</label>
+      <textarea formControlName="description" class="form-control"></textarea>
+    </div>
+  </div>
+
+  <br/>
+  <div class="row">
+    <div class="col">
+      <a routerLink="/accueil" class="btn btn-primary btn-block pull-left">Annuler</a>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary btn-block pull-right">Valider</button>
+    </div>
+  </div>
+</form>

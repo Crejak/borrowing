@@ -41,7 +41,8 @@ export class User {
   firstName: string;
   lastName: string;
   email: string;
-  stars: number;
+  starsAnnouncer: number;
+  starsApplicant: number;
 }
 
 const USERS: User[] = [
@@ -50,20 +51,23 @@ const USERS: User[] = [
     firstName: "Thibault",
     lastName: "Bellemin",
     email: "arthur.bellemin@gmail.com",
-    stars: 3.4
+    starsAnnouncer: 3.4,
+    starsApplicant: 4.3,
   },
   {
     id: 2,
     firstName: "Sophie",
     lastName: "Marceau",
     email: "sophie.marceau@yahoo.fr",
-    stars: 2.0
+    starsAnnouncer: 2.0,
+    starsApplicant: 3.5,
   },
   {
     id: 3,
     firstName: "Mazine",
     lastName: "Assimi",
     email: "mazine.assimi@insa-lyon.fr",
-    stars: 4.8
+    starsAnnouncer: 4.8,
+    starsApplicant: 4.3,
   }
 ]

@@ -26,7 +26,7 @@ export class AppComponent {
 
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    if (event.code === "F6") {
+    if (event.code === "KeyD") {
       this.triggerDevelopperMode();
     }
   }

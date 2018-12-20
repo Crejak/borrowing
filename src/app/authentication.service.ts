@@ -18,8 +18,17 @@ export class AuthenticationService {
     this.loggedInUser = new Subject<User>();
   }
 
-  getLoggedInUser(): Subject<User> {
+  getLoggedInUserSubject(): Subject<User> {
     return this.loggedInUser;
+  }
+
+  getLoggedInUser(): User {
+    if (this.loggedInAccountId === null || this.loggedInAccountId === undefined) {
+      return null;
+    }
+    let account = this.getUserAccount(this.loggedInAccountId);
+    let user = this.userService.getUser(account.userId);
+    return user;
   }
 
   isAuthenticated(): boolean {

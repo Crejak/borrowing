@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.title = this.utilService.getApplicationName();
-    this.authenticationService.getLoggedInUser().subscribe(user => {
+    this.authenticationService.getLoggedInUserSubject().subscribe(user => {
       if (user !== null && user !== undefined) {
         this.isAuthenticated = true;
       } else {

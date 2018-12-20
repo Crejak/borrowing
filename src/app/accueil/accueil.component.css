@@ -1,0 +1,32 @@
+.marginTop{
+    margin-top: 10px;
+}
+
+.marginTopCustom{
+    margin-top: 80px;
+}
+
+.boutonAnnonce{
+    height : 75px;
+    margin-top : 10px;
+}
+
+.searchDiv{
+    position: relative;
+}
+
+.searchInput{
+    position : absolute;
+    right : 0px;
+    width : 90%;
+}
+
+.searchIcon{
+    position : absolute;
+    top : 16px; 
+    left: 6px;  
+}
+
+.selectCategories{
+    margin-top: 20px;
+}
