@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class AuthenticationService {
 
-  private accounts: UserAccount[];
+  accounts: UserAccount[];
   private loggedInAccountId: number;
   private loggedInUser: Subject<User>;
 
@@ -81,12 +81,22 @@ export class AuthenticationService {
     });
     return accountFound;
   }
+
+  addAccount(userAccount: UserAccount){
+    userAccount.accountId = this.accounts[this.accounts.length-1].accountId+1;
+    this.accounts.push(userAccount);
+  }
 }
 
-class UserAccount {
+export class UserAccount {
 	accountId: number;
 	password: string;
   userId: number;
+
+  constructor(password: string, userId: number){
+    this.password = password;
+    this.userId = userId;
+  }
 };
 
 const ACCOUNTS: UserAccount[] = [

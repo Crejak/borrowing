@@ -1,3 +1,18 @@
-<footer class="footer">
-  CECI EST UN FOOTER
-</footer>
+<nav *ngIf="isAuthenticated" class="fixed-bottom navbar-light bg-light navbar-footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <a class="navbar-icon nav-link" routerLink="accueil"><fa name="home"></fa></a>
+      </div>
+      <div class="col text-center">
+        <a class="navbar-icon nav-link" routerLink="myannounces"><fa name="list-alt"></fa></a>
+      </div>
+      <div class="col text-center">
+        <a class="navbar-icon nav-link" routerLink="mydemandes"><fa name="clock-o"></fa></a>
+      </div>
+      <div class="col text-center">
+        <a class="navbar-icon nav-link" routerLink="createad"><fa name="plus"></fa></a>
+      </div>
+    </div>
+  </div>
+</nav>

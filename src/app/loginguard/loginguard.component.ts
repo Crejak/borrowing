@@ -16,7 +16,10 @@ export class LoginguardComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("Login guard :");
+    console.log(this.authenticationService.isAuthenticated());
     if (! this.authenticationService.isAuthenticated()) {
+      console.log("redirection");
       this.router.navigate(['/login']);
     }
   }

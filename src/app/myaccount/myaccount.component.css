@@ -30,6 +30,18 @@
   margin-bottom: 15px;
 }
 
-.card {
-  background-color: #80808017;
+.top-right-icon {
+  position: absolute;
+  width: 10%;
+  top: -1px;
+  right: -1px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.jumbotron {
+  border-radius: 0px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

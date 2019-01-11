@@ -1,5 +1,7 @@
+<app-loginguard></app-loginguard>
+
 <div class="row">
-  <div class="col text-center">
+  <div class="col text-center title-page-larry">
     Nouvelle annonce
   </div>
 </div>
@@ -7,28 +9,32 @@
 <form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
   <div class="row">
     <!-- div for the product's picture -->
-    <div class="col">
+    <div class="col text-center" style="position:relative;">
       <br/>
-      <img src="assets/addImage.png" class="rounded mx-auto d-block" height="120" alt="addImage">
+      <img class="center" [src]="profileImage" style="height:120px;">
+      <input [src]="profileImage" required accept=".jpg" (change)="onFileUpload($event)"
+             type="file" class="center" style="opacity: 0.0; position: absolute; right:0; width: 100%; height:100%;" />
     </div>
   </div>
 
   <div class="row">
     <div class="col">
-      <label for="titre">Titre :</label>
+      <label>Titre :</label>
       <input formControlName="titre" class="form-control" type="text">
-      <label for="categorie">Catégorie :</label>
-      <input formControlName="categorie" class="form-control" type="text">
+      <label>Catégorie :</label>
+      <select class= "form-control selectCategories">
+        <option *ngFor="let categorie of categories" value="{{categorie.id}}"> {{categorie.value}} </option>
+      </select>
     </div>
   </div>
 
   <div class="row">
     <div class="col">
-      <label for="caution">Caution :</label>
-      <input formControlName="caution" class="form-control" type="text" placeholder="€">
-      <label for="maxDuration">Durée max :</label>
-      <input formControlName="maxDuration" class="form-control" type="number" placeholder="jours">
-      <label for="description">Description :</label>
+      <label>Caution :</label>
+      <input formControlName="caution" class="form-control" type="number" placeholder="€">
+      <label>Durée max :</label>
+      <input formControlName="maxDuration" class="form-control" type="text" placeholder="jours">
+      <label>Description :</label>
       <textarea formControlName="description" class="form-control"></textarea>
     </div>
   </div>

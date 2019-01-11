@@ -1,8 +1,18 @@
-<div class="marginTopCustom text-center border rounded" name="featuredAnnonce">
-  <h4>{{titre}}</h4>
-  <div>{{description}}</div>
-  <div class = "row scroll">
-    <div class="col-6">Caution : {{caution}} euros</div>
-    <div class="col-6">Durée max : {{duree}}</div>
+<div class="rounded col container-fluid nice-shadow" name="featuredAnnonce2" attr.data-cat="{{idCat}}" >
+  <div class="row text-center">
+    <div class="col">
+      <h4 class="titleAnnonce">{{titre}}</h4>
+    </div>
+  </div>
+  <div class = "row magicMargin">
+    <div class="col-6" style="padding: 0;">{{description}}</div>
+    <div class="pictureOfAnnonce col-6">
+        <img  class="miniThumbnailCustom"
+              src="{{photo}}"/>
+    </div>
+  </div>
+  <div class = "secondRow row scroll">
+    <div class="col-6 infosAnnonce">Caution : {{caution}} €</div>
+    <div class="col-6 infosAnnonce">Durée max : {{duree}}</div>
   </div>
 </div>

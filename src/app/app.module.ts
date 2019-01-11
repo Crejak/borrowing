@@ -3,6 +3,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,17 @@ import { MyaccountComponent } from './myaccount/myaccount.component';
 import { CssattrPipe } from './cssattr.pipe';
 import { AnnonceVueSynthetiqueComponent } from './annonce-vue-synthetique/annonce-vue-synthetique.component';
 import { FooterComponent } from './footer/footer.component';
+import { EvaluationAdvertiserComponent } from './evaluation-advertiser/evaluation-advertiser.component';
+import { EvaluationApplicantComponent } from './evaluation-applicant/evaluation-applicant.component';
+import { ContactComponent } from './contact/contact.component';
+import { MesannoncesComponent } from './mesannonces/mesannonces.component';
+import { AnnonceVueSynthetiqueSupprimerComponent } from './annonce-vue-synthetique-supprimer/annonce-vue-synthetique-supprimer.component';
+import { DetailAnnonceComponent } from './detail-annonce/detail-annonce.component';
+import { FilterPipe } from './filter.pipe';
+import { MesdemandesComponent } from './mesdemandes/mesdemandes.component';
+import { ProfilAnnouncerComponent } from './profil-announcer/profil-announcer.component';
+import { ViewAnnoncComponent } from './view-annonc/view-annonc.component';
+
 
 @NgModule({
   declarations: [
@@ -33,13 +45,24 @@ import { FooterComponent } from './footer/footer.component';
     MyaccountComponent,
     CssattrPipe,
     AnnonceVueSynthetiqueComponent,
-    FooterComponent
+    FooterComponent,
+    EvaluationAdvertiserComponent,
+    EvaluationApplicantComponent,
+    ContactComponent,
+    MesannoncesComponent,
+    AnnonceVueSynthetiqueSupprimerComponent,
+    DetailAnnonceComponent,
+    FilterPipe,
+    MesdemandesComponent,
+    ProfilAnnouncerComponent,
+    ViewAnnoncComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

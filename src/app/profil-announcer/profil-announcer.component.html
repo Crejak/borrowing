@@ -1,0 +1,64 @@
+<app-loginguard></app-loginguard>
+<div class="container">
+  <div class="row">
+    <div class = "title-page-larry col blockquote text-center">Profil de l'annonceur</div>
+  </div>
+  <div class="row text-center">
+    <!--<div class="container-fluid">
+      <div class="nice-shadow mx-auto">
+        <div class="row card-body" style="padding-bottom: 0;">
+          <div class="col-4">
+            <img [src]="getUserProfilePicture()" alt="image" style="width: 100%;">
+          </div>
+          <div class="col-8">
+            <h5 class="card-title">{{getUserFirstName()}} {{getUserLastName() | uppercase}}</h5>
+            <p class="card-link">{{getUserEmail()}}</p>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="col text-center">
+      <img [src]="getUserProfilePicture()" alt="image" style="width: 100%; border-radius: 300px; box-shadow: 0px 0px 5px -4px black">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <h5>{{getUserFirstName()}} {{getUserLastName() | uppercase}}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <p>{{getUserEmail()}}</p>
+    </div>
+  </div>
+  <hr style="height: 10px;">
+  <div class="row">
+    <div class="col">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            Note annonceur
+          </div>
+          <div class="col" style="position: relative;">
+            <div class="star-ratings-css" style="position: absolute; top: -7px;">
+              <div class="star-ratings-css-top" [style]="getStarsAnnouncerStyle()"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col">
+            Note matériel
+          </div>
+          <div class="col" style="position: relative;">
+            <div class="star-ratings-css" style="position: absolute; top: -7px;">
+              <div class="star-ratings-css-top" [style]="getStarsMaterialStyle()"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

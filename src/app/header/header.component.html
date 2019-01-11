@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-header navbar-expand-sm navbar-light bg-light ">
   <!--a routerLink="" class="navbar-brand display-1 lead">{{ title }}</a-->
   <a routerLink="" class="navbar-brand display-1 lead"><img src="assets/logo_black.png" height="30" [alt]="title"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" *ngIf="isAuthenticated || developperMode">
@@ -7,6 +7,9 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" routerLink="myaccount" *ngIf="isAuthenticated"><fa name="user"></fa> Mon compte ({{user.firstName}} {{user.lastName | uppercase}})</a>
+      <!--a class="nav-item nav-link" routerLink="myannounces" *ngIf="isAuthenticated"><fa name="list-alt"></fa> Mes annonces</a>
+      <a class="nav-item nav-link" routerLink="mydemandes" *ngIf="isAuthenticated"><fa name="clock-o"></fa> Mes demandes</a>
+      <a class="nav-item nav-link" routerLink="createad" *ngIf="isAuthenticated"><fa name="plus"></fa> Déposer une annonce</a-->
       <span class="nav-item nav-link" (click)="signOut()" *ngIf="isAuthenticated"><fa name="sign-out"></fa> Déconnexion</span>
       <a class="nav-item nav-link" routerLink="test" *ngIf="developperMode"><fa name="wrench"></fa> (DEVELOPPEURS) Page de test</a>
     </div>

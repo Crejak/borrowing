@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col blockquote text-center">
-    Bienvenue sur {{ title }}, l'application de solidarité de la Doua&#8239;! Prêter et emprunter du matériel en tout sérénité&#8239;!
+    Bienvenue sur {{ title }}, l'application de solidarité de la Doua&#8239;! Prêter et emprunter du matériel en toute sérénité&#8239;!
   </div>
 </div>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -11,6 +11,16 @@
           <span>&times;</span>
         </button>
         <fa name="exclamation-triangle" style="margin-right: 10px;"></fa> {{ error }}
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="accountCreated">
+    <div class="col">
+      <div class="alert text-center alert-success">
+          <button type="button" class="close" aria-label="Close" (click)="accountCreated=null">
+            <span>&times;</span>
+          </button>
+          {{ accountCreated }}
       </div>
     </div>
   </div>

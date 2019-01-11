@@ -1,0 +1,69 @@
+/*.annonce-card {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}*/
+
+.annonce-card {
+  background-color: white;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 2px #EEE;
+}
+
+.titre {
+
+}
+
+.champ {
+  color: #505050;
+}
+
+.caution-prix {
+  color: #551607;
+  font-weight: bold;
+}
+
+.duree {
+  color: #292929;
+  font-weight: bold;
+}
+
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  margin-bottom: 12px;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+.star-ratings-css-top {
+  color: #e7711b;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.star-ratings-css-bottom {
+  padding: 0;
+  display: block;
+  z-index: 0;
+}
+
+.top-right-icon {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  text-align: center;
+}

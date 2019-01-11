@@ -1,0 +1,22 @@
+<app-loginguard></app-loginguard>
+<div class="row">
+  <div class = "title-page-larry col blockquote text-center">Mes demandes</div>
+</div>
+<div class="row">
+  <div class="col" style="padding: 0px;">
+    <!--div class="container-fluid">
+      <div class="row" *ngFor="let annonce of annonces">
+        <app-annonce-vue-synthetique-supprimer
+          [annonce]="annonce"
+          [canModify]="false"
+          style="width: 100%; margin-top: 10px;"
+        >
+        </app-annonce-vue-synthetique-supprimer>
+      </div>
+    </div-->
+    <app-view-annonc *ngFor="let annonce of annonces"
+                      [annonce]="annonce"
+                      [canModify]="false"
+                      routerLink="/detailannonce/{{annonce.id}}"></app-view-annonc>
+  </div>
+</div>

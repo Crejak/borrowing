@@ -23,7 +23,13 @@ export class AnnonceVueSynthetiqueComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.id);
+    //console.log(this.id);
+    let shortenedDescription:String = this.description;
+    if(shortenedDescription.length > 50)
+    {
+      shortenedDescription = shortenedDescription.substring(0,50);
+      shortenedDescription += "...";
+    }
   }
 
 }

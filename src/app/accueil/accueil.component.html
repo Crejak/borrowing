@@ -1,22 +1,60 @@
 <app-loginguard></app-loginguard>
-<button type = "button" style="width : 100%" class="btn btn-primary boutonAnnonce"> Déposer une annonce </button>
-<select class= "form-control selectCategories">
-  <option *ngFor="let categorie of categories" value="{{categorie.id}}"> {{categorie.value}} </option>
-</select>
-<div class="searchDiv marginTop">  
-  <fa class ="searchIcon" name="search"></fa>
-  <input type="search" placeholder="Rechercher une annonce" name="searchProduct" class="marginTop form-control searchInput"/> 
+<div class="row" *ngIf="messageSent">
+  <div class="col">
+    <div class="alert text-center alert-success">
+        <button type="button" class="close" aria-label="Close" (click)="messageSent=null">
+          <span>&times;</span>
+        </button>
+        {{ messageSent }}
+    </div>
+  </div>
 </div>
-<div class="marginTopCustom text-center border rounded" name="featuredAnnonce">
-  <h3> Les annonces du moment </h3>
-  <app-annonce-vue-synthetique *ngFor="let annonce of annonces" 
-                                id="{{annonce.id}}"
-                                titre="{{annonce.titre}}"
-                                idCat="{{annonce.idCat}}"
-                                caution="{{annonce.caution}}"
-                                duree="{{annonce.duree}}"
-                                description="{{annonce.description}}"
-                                photo="{{annonce.photo}}"
-  > 
-  </app-annonce-vue-synthetique>
+<div class="row">
+  <div class="col">
+    <button routerLink="/createad" type = "button" style="width : 100%" class="btn btn-primary boutonAnnonce">Déposer une annonce </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <select [(ngModel)]="idCatSelectionne"
+            class= "form-control selectCategories"
+            (change)="updateCategories()"
+    >
+      <option *ngFor="let categorie of categories" value="{{categorie.id}}"> {{categorie.value}} </option>
+    </select>
+  </div>
+</div>
+<div class="row" style="padding-top: 20px;">
+  <div class="col-1">
+    <fa class ="searchIcon" name="search"></fa>
+  </div>
+  <div class="col-11">
+    <input type="search" [(ngModel)]="searchText" placeholder="Rechercher une annonce" name="searchProduct" class="form-control searchInput"/>
+  </div>
+</div>
+<!--div class="marginTopCustom text-center" name="featuredAnnonce">
+  <h3 *ngIf="idCatSelectionne==0"> Annonces en vogue </h3>
+  <div class="container-fluid">
+    <app-annonce-vue-synthetique *ngFor="let annonce of annonces | filter : searchText"
+                                  id="{{annonce.id}}"
+                                  titre="{{annonce.titre}}"
+                                  idCat="{{annonce.idCategorie}}"
+                                  caution="{{annonce.caution}}"
+                                  duree="{{annonce.duree}}"
+                                  description="{{annonce.description}}"
+                                  photo="{{annonce.photo}}"
+                                  class="pieceOfAnnonce row"
+                                  routerLink="/detailannonce/{{annonce.id}}"
+
+    >
+    </app-annonce-vue-synthetique>
+  </div>
+</div-->
+<div class="row">
+  <div class="col" style="padding: 0;">
+    <app-view-annonc *ngFor="let annonce of annonces | filter : searchText"
+                     [annonce]="annonce"
+                     [canModify]="false"
+                     routerLink="/detailannonce/{{annonce.id}}"></app-view-annonc>
+  </div>
 </div>

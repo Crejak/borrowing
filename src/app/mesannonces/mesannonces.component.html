@@ -1,0 +1,34 @@
+<app-loginguard></app-loginguard>
+<div class="row">
+  <div class = "col blockquote text-center title-page-larry">Mes annonces</div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="btn-group" style="width: 100%;">
+      <button class="btn btn-primary" style="width: 50%;" [disabled]="enCours" (click)="switchEnCours()">En cours</button>
+      <button class="btn btn-primary" style="width: 50%;" [disabled]="!enCours" (click)="switchEnCours()">Supprimé</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col" style="padding: 0;">
+    <!--div class="container-fluid">
+      <div class="row" *ngFor="let annonce of annonces">
+        <app-annonce-vue-synthetique-supprimer
+          [annonce]="annonce"
+          [onDelete]="deleteAnnonce"
+          [onUndelete]="undeleteAnnonce"
+          [canModify]="true"
+          style="width: 100%; margin-top: 10px;"
+        >
+        </app-annonce-vue-synthetique-supprimer>
+      </div>
+    </div-->
+    <app-view-annonc *ngFor="let annonce of annonces"
+                     [annonce]="annonce"
+                     [onDelete]="deleteAnnonce"
+                     [onUndelete]="undeleteAnnonce"
+                     [canModify]="true">
+    </app-view-annonc>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container-fluid annonce-card" style="position: relative;">
+  <div class="row">
+    <div class="col-5" style="border-right: 1px solid #d3d3d354;">
+      <img style="width: 100%" src="{{annonce.photo}}"/>
+    </div>
+    <div class="col-7">
+      <div class="container-fluid">
+        <div class="row">
+          <h5 class="titre">{{annonce.titre}}</h5>
+        </div>
+        <div class="row">
+          <span class="champ">Caution : <span class="caution-prix">{{annonce.caution}} €</span></span>
+        </div>
+        <div class="row">
+          <span class="champ">Durée : <span class="duree">{{annonce.duree}}</span></span>
+        </div>
+        <div class="row">
+            <div class="star-ratings-css">
+              <div class="star-ratings-css-top" [style]="getStarsStyle()"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="annonce.enCours && canModify" class="top-right-icon btn btn-link text-danger" (click)="clickDelete()">
+    <fa name="times"></fa>
+  </button>
+  <button *ngIf="!annonce.enCours && canModify" class="top-right-icon btn btn-link text-success" (click)="clickUndelete()">
+    <fa name="arrow-left"></fa>
+  </button>
+</div>

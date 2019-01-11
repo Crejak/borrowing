@@ -1,0 +1,79 @@
+.miniThumbnailCustom{  
+    max-width: 120px;    
+}
+
+.bottomButtons{
+    margin-top: 10px;
+}
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+.star-ratings-css-top {
+  color: #e7711b;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.star-ratings-css-bottom {
+  padding: 0;
+  display: block;
+  z-index: 0;
+}
+
+.titreAnnonce{
+    text-align: center;
+    border-top : 1px solid #dee2e6!important;
+    border-bottom : 1px solid #dee2e6!important;
+    height: 34px;
+}
+
+.littleMargin{
+    margin-top: 10px;
+}
+
+.middleMargin{
+    margin-top: 20px;
+}
+
+.boldText{
+    font-weight: bold;
+}
+
+.secondPartOfInfo{
+    display: inline;
+}
+
+.centrageVerti{
+    margin: auto;
+}
+
+.jumbotron{
+  background-color: white;
+}
+
+.caution-prix {
+  color: #551607;
+  font-weight: bold;
+}
+
+.duree {
+  color: #292929;
+  font-weight: bold;
+}
+
+.champ {
+  color: #505050;
+}

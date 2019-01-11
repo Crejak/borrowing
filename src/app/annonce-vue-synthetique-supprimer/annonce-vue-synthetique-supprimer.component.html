@@ -1,0 +1,24 @@
+<div class="nice-shadow rounded col container-fluid" name="featuredAnnonce2" style="position:relative;">
+  <div class="row text-center">
+    <div class="col">
+      <h4 class="titleAnnonce">{{annonce.titre}}</h4>
+    </div>
+  </div>
+  <div class = "row magicMargin">
+    <div class="col-6" style="padding: 0;">{{annonce.description}}</div>
+    <div class="pictureOfAnnonce col-6">
+      <img  class="miniThumbnailCustom"
+            src="{{annonce.photo}}"/>
+    </div>
+  </div>
+  <div class = "secondRow row scroll">
+    <div class="col-6 infosAnnonce">Caution : {{annonce.caution}} €</div>
+    <div class="col-6 infosAnnonce">Durée max : {{annonce.duree}}</div>
+  </div>
+  <button *ngIf="annonce.enCours && canModify" class="top-right-icon btn btn-link text-danger" (click)="clickDelete()">
+    <fa name="times"></fa>
+  </button>
+  <button *ngIf="!annonce.enCours && canModify" class="top-right-icon btn btn-link text-success" (click)="clickUndelete()">
+    <fa name="arrow-left"></fa>
+  </button>
+</div>

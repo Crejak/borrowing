@@ -1,0 +1,30 @@
+<div class="row">
+  <div class = "col blockquote text-center title-page-larry" *ngIf="contact">Contacter {{ contact.firstName }} {{ contact.lastName }} pour l'outil "{{ annonce.titre }}"</div>
+</div>
+<div class="row" *ngIf="error">
+  <div class="col">
+    <div class="alert alert-danger">
+      <button type="button" class="close" aria-label="Close" (click)="error=null">
+        <span>&times;</span>
+      </button>
+      <fa name="exclamation-triangle" style="margin-right: 10px;"></fa> {{ error }}
+    </div>
+  </div>
+</div>
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col form-group">
+        <textarea class="form-control" formControlName="message" rows="15" id="message" placeholder="Bonjour, ..."></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <a routerLink="/login/1" class="btn btn-primary btn-block pull-left">Annuler</a>
+      </div>
+      <div class="col">
+        <button id ="submit" type="submit" class="btn btn-primary btn-block pull-right">Envoyer</button>
+      </div>
+    </div>
+  </div>
+</form>
